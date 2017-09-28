@@ -1,0 +1,64 @@
+.promo {
+  padding: 8% 0;
+  background: url(/img/promo/bg-1200.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  border-bottom: 2px solid $white;
+  position: relative;
+}
+
+.promo__title {
+  color: $white;
+  margin: 0 0 5%;
+  font-family: "GothamPro", Arial, sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 96px;
+}
+
+.promo__title-big {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.promo__title-medium {
+  display: block;
+  font-size: 0.38em;
+  letter-spacing: 0.72em;
+  margin-bottom: 0.53em;
+}
+
+.promo__title-small {
+  display: block;
+  font-size: 0.21em;
+  letter-spacing: 0.76em;
+}
+
+.promo__callback {
+  text-align: center;
+}
+
+@media #{$t} {
+  .promo {
+    margin: 0 -10px;
+    background-image: url(/img/promo/bg-1200.jpg);
+  }
+}
+
+@media #{$s} {
+  .promo {
+    background-image: url(/img/promo/bg-1200.jpg);
+  }
+
+  .promo__title {
+    font-size: 70px;
+  }
+}
+
+@media #{$m480} {
+  .promo__title {
+    font-size: 50px;
+    margin-bottom: 10%;
+  }
+}

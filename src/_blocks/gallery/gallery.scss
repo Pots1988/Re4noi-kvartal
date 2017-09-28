@@ -1,0 +1,7 @@
+$gallery-small-bg: rgba(255,255,255,0.85);
+
+@media #{$t} {
+  .gallery {
+    margin: 0 -10px;
+  }
+}

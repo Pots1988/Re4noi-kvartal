@@ -1,0 +1,155 @@
+.flats {
+  background-image: url(/img/flats/bg-1200.jpg);
+  position: relative;
+}
+
+.flats__choose {
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  background: $white;
+  margin: 0;
+  height: 70px;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2e2b30;
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+    &:not(:first-child) {
+      &::before {
+        content: "|";
+        color: #2e2b30;
+        margin: 0 4px;
+      }
+    }
+    &:hover {
+      color: #4b74b7;
+    }
+    &.active {
+      color: #4b74b7;
+      cursor: default;
+    }
+  }
+}
+
+.flats__descr {
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.flats__descr-title {
+  font-size: 1.5em;
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0 0 0.67em;
+}
+
+.flats__descr-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  li {
+    width: 43%;
+  }
+}
+
+.flats__choose-plan {
+  display: inline-block;
+  vertical-align: middle;
+  color: #df4008;
+  font-size: 1.13em;
+  line-height: 1.67;
+  text-decoration: none;
+  padding-right: 1.28em;
+  position: relative;
+  transition: 0.3s;
+  &:hover {
+    padding-right: 2.22em;
+    &::after {
+      height: 2px;
+      width: 1.44em;
+      margin-top: -1px;
+    }
+    &::before {
+      opacity: 1;
+      transform: rotate(45deg) scale(1);
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #df4008;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+    transition: 0.3s;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -0.351em;
+    width: 0.72em;
+    height: 0.72em;
+    background: #df4008;
+    transition: 0.3s;
+  }
+}
+
+@media #{$t} {
+  .flats {
+    background-image: url(/img/flats/bg-1024.jpg);
+  }
+
+  .flats__choose {
+    top: 30px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 1;
+  }
+}
+
+@media #{$s} {
+  .flats {
+    background-image: url(/img/flats/bg-767.jpg);
+  }
+
+  .flats__choose {
+    top: 20px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .flats__descr {
+    font-size: 14px;
+  }
+
+  .flats__descr-list {
+    li {
+      width: 100%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media #{$m480} {
+  .flats__choose {
+    font-size: 10px;
+  }
+}

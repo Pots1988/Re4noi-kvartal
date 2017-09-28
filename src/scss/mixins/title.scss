@@ -1,0 +1,29 @@
+@mixin title {
+  text-transform: uppercase;
+  color: #353535;
+  font: 700 72px/1 "BebasNeueBold", Arial, sans-serif;
+  position: relative;
+  padding-bottom: 0.0972em;
+  margin: 0 0 0.24em;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 2.19em;
+    background: #94beff;
+  }
+  @media #{$t} {
+    font-size: 60px;
+    &::after {
+      height: 3px;
+    }
+  }
+  @media #{$s} {
+    font-size: 50px;
+    &::after {
+      height: 2px;
+    }
+  }
+}

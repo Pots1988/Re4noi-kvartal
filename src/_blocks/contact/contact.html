@@ -1,0 +1,26 @@
+<section class="contact" id="contact">
+  <h2 class="visually-hidden">Контакты</h2>
+  <div class="contact__mask"></div>
+  <div class="contact__form">
+    <div class="contact__form-inner" id="callback">
+      <h3 class="contact__form-title">Закажите звонок нашего менеджера</h3>
+      <form class="form" action="/echo" method="POST" id="feedback">
+        <label class="form__label">
+          <input class="form__input" type="text" name="name" title="Имя должно быть не менее 2-х символов" placeholder="Имя*" required>
+        </label>
+        <label class="form__label">
+          <input class="form__input" type="text" name="surname" title="Фамилия должна быть не менее 2-х символов" placeholder="Фамилия*" required>
+        </label>
+        <label class="form__label">
+          <input class="form__input" type="email" name="email" title="Почта должа быть вида xxx@xxx.xxx" placeholder="Email*" required>
+        </label>
+        <label class="form__label">
+          <input class="form__input" type="tel" name="tel" title="Телефон должен быть в формате +X (XXX) XXX XX XX" placeholder="Телефон*" required>
+          </span>
+        </label>
+        <button type="submit" class="btn form__btn">Позвонить мне</button>
+      </form>
+    </div>
+  </div>
+  <div class="contact__map" id="map"></div>
+</section>

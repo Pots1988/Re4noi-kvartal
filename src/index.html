@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <title></title>
+  <title>Жилой комплекс - Речной квартал</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   @@include("_blocks/head/head.html")
 </head>
-<body>
+<body id="top">
   @@include("../build/img/svg/symbols.svg")
-  @@include("_blocks/header/header.html")
 
+  <div class="wrap">
+    @@include("_blocks/header/header-main.html")
+    @@include("_blocks/promo/promo.html")
+    @@include("_blocks/about/about.html")
+    @@include("_blocks/flats/flats.html")
+    @@include("_blocks/gallery/gallery.html")
+    @@include("_blocks/news/news.html")
+    @@include("_blocks/contact/contact.html")
+    @@include("_blocks/footer/footer.html")
+  </div>
 
-  @@include("_blocks/footer/footer.html")
+  @@include("_blocks/popup/popup-feedback.html")
   @@include("_blocks/bottom/bottom.html")
-  @@include("_blocks/ga/ga.html")
-  @@include("_blocks/ym/ym.html")
 </body>
 </html>

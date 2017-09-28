@@ -1,0 +1,157 @@
+$bg-block-bg: rgba(255,255,255,0.9);
+
+.bg-block {
+  padding: 140px 0 80px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-bottom: 2px solid $white;
+  &--parallax {
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+}
+
+.bg-block__parallax {
+  height: 524px;
+  overflow-y: auto;
+  margin-right: -25px;
+  padding-right: 25px;
+}
+
+.bg-block__info {
+  background: $bg-block-bg;
+  padding: 3.44% 0 2.96%;
+  margin-bottom: 30px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.bg-block__wrap {
+  @include wrap;
+  &--big {
+    max-width: 1190px;
+    padding: 0 10px;
+  }
+}
+
+.bg-block__title {
+  @include title;
+  &--wrap {
+    margin-bottom: 0;
+  }
+}
+
+.bg-block__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 400px;
+  flex-shrink: 0;
+  &--flat {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+.bg-block__right {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-end;
+}
+
+.bg-block__list {
+  margin: 0 0 1.5em;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  li {
+    margin: 0 0 0.63em;
+    padding-left: 0.88em;
+    position: relative;
+    &::before {
+      content: "";
+      width: 0.38em;
+      height: 0.38em;
+      background: $black;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0.44em;
+    }
+  }
+}
+
+@media #{$t} {
+  .bg-block {
+    margin: 0 -10px;
+    padding: 80px 0 40px;
+    &--parallax {
+      padding-bottom: 0;
+    }
+  }
+
+  .bg-block__wrap {
+    &--big {
+      padding: 0;
+    }
+  }
+
+  .bg-block__left {
+    width: 330px;
+  }
+
+  .bg-block__info {
+    padding: 30px 10px;
+  }
+}
+
+@media #{$s} {
+  .bg-block {
+    padding: 60px 0 20px;
+    &--parallax {
+      padding-bottom: 0;
+      position: relative;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 40px;
+        left: 0;
+      }
+      &::before {
+        top: 60px;
+        background: linear-gradient(to top, rgba(255, 255, 255, 0), #fff);
+      }
+      &::after {
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+      }
+    }
+  }
+
+  .bg-block__parallax {
+    height: 400px;
+  }
+
+  .bg-block__info {
+    margin-bottom: 20px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .bg-block__title {
+    &--wrap {
+      margin-bottom: 0.2em;
+    }
+  }
+
+  .bg-block__left {
+    width: auto;
+  }
+}

@@ -1,0 +1,145 @@
+$news-month-bg: #c71d51;
+$news-color: #494949;
+$news-btn-bg: #353535;
+
+.news {
+  padding: 8% 0 3.12%;
+  @include wrap;
+  overflow: hidden;
+}
+
+.news__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -24px;
+}
+
+.news__item {
+  width: 25%;
+  padding-right: 24px;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.news__img {
+  display: block;
+  margin-bottom: 10px;
+  img {
+    display: block;
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.news__full-date {
+  position: absolute;
+  border-radius: 3px;
+  overflow: hidden;
+  top: 10px;
+  left: 10px;
+  background: $white;
+  width: 34px;
+  text-align: center;
+  margin: 0;
+}
+
+.news__date {
+  font-size: 18px;
+  line-height: 1;
+  display: block;
+  padding: 1px 0;
+}
+
+.news__month {
+  background: $news-month-bg;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 1;
+  display: block;
+  padding: 3px 0;
+}
+
+.news__title {
+  margin: 0 0 0.5em;
+  font-size: 16px;
+  font-weight: 400;
+  color: $news-color;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.news__descr {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  color: $news-color;
+  p {
+    margin: 0;
+  }
+}
+
+.news__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.news__info {
+  margin: 0;
+  font-size: 7px;
+  line-height: 1;
+}
+
+.news__btn {
+  font-size: 10px;
+  min-width: 102px;
+  text-align: center;
+  padding: 7px 5px;
+  background: $news-btn-bg;
+}
+
+@media #{$t} {
+  .news__list {
+    margin-right: -15px;
+    justify-content: center;
+  }
+
+  .news__item {
+    max-width: 250px;
+    width: 33.333333%;
+    padding-right: 15px;
+    margin-bottom: 25px;
+  }
+}
+
+@media #{$s} {
+  .news__item {
+    width: 50%;
+    max-width: 360px;
+  }
+
+  .news__full-date {
+    position: absolute;
+    border-radius: 3px;
+    overflow: hidden;
+    top: 10px;
+    left: 10px;
+    background: $white;
+    width: 34px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .news__date {
+    font-size: 14px;
+  }
+}
+
+@media #{$m480} {
+  .news__item {
+    width: 100%;
+  }
+}

@@ -1,20 +1,60 @@
 @font-face {
-  font-family: "Evolventa";
-  font-weight: 400;
+  font-family: "Lato";
+  font-weight: 300;
 
-  src: url(#{$font-path}/evolventa/10359.eot);
-  src: url(#{$font-path}/evolventa/10359.eot) format("embedded-opentype"),
-  url(#{$font-path}/evolventa/10359.woff2) format("woff2"),
-  url(#{$font-path}/evolventa/10359.woff) format("woff"),
-  url(#{$font-path}/evolventa/10359.ttf) format("truetype");
+  src: url(/fonts/Lato/LatoLight.eot);
+  src: url(/fonts/Lato/LatoLight.eot) format("embedded-opentype"),
+       url(/fonts/Lato/LatoLight.woff2) format("woff2"),
+       url(/fonts/Lato/LatoLight.woff) format("woff"),
+       url(/fonts/Lato/LatoLight.ttf) format("truetype");
 }
 @font-face {
-  font-family: "Evolventa";
+  font-family: "Lato";
+  font-weight: 400;
+
+  src: url(/fonts/Lato/LatoRegular.eot);
+  src: url(/fonts/Lato/LatoRegular.eot) format("embedded-opentype"),
+       url(/fonts/Lato/LatoRegular.woff2) format("woff2"),
+       url(/fonts/Lato/LatoRegular.woff) format("woff"),
+       url(/fonts/Lato/LatoRegular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Lato";
   font-weight: 700;
 
-  src: url(#{$font-path}/evolventa/10360.eot);
-  src: url(#{$font-path}/evolventa/10360.eot) format("embedded-opentype"),
-  url(#{$font-path}/evolventa/10360.woff2) format("woff2"),
-  url(#{$font-path}/evolventa/10360.woff) format("woff"),
-  url(#{$font-path}/evolventa/10360.ttf) format("truetype");
+  src: url(/fonts/Lato/LatoBold.eot);
+  src: url(/fonts/Lato/LatoBold.eot) format("embedded-opentype"),
+       url(/fonts/Lato/LatoBold.woff2) format("woff2"),
+       url(/fonts/Lato/LatoBold.woff) format("woff"),
+       url(/fonts/Lato/LatoBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "GothamPro";
+  font-weight: 400;
+
+  src: url(/fonts/GothamPro/GothamProReg.eot);
+  src: url(/fonts/GothamPro/GothamProReg.eot) format("embedded-opentype"),
+       url(/fonts/GothamPro/GothamProReg.woff2) format("woff2"),
+       url(/fonts/GothamPro/GothamProReg.woff) format("woff"),
+       url(/fonts/GothamPro/GothamProReg.ttf) format("truetype");
+}
+@font-face {
+  font-family: "GothamPro";
+  font-weight: 700;
+
+  src: url(/fonts/GothamPro/GothamProBold.eot);
+  src: url(/fonts/GothamPro/GothamProBold.eot) format("embedded-opentype"),
+       url(/fonts/GothamPro/GothamProBold.woff2) format("woff2"),
+       url(/fonts/GothamPro/GothamProBold.woff) format("woff"),
+       url(/fonts/GothamPro/GothamProBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "BebasNeueBold";
+  font-weight: 700;
+
+  src: url(/fonts/BebasNeueBold/BebasNeueBold.eot);
+  src: url(/fonts/BebasNeueBold/BebasNeueBold.eot) format("embedded-opentype"),
+       url(/fonts/BebasNeueBold/BebasNeueBold.woff2) format("woff2"),
+       url(/fonts/BebasNeueBold/BebasNeueBold.woff) format("woff"),
+       url(/fonts/BebasNeueBold/BebasNeueBold.ttf) format("truetype");
 }
