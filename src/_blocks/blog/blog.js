@@ -18,10 +18,10 @@ if ($(".blog").length) {
     arrows: true,
     toolbar : true,
     buttons : [
-      'slideShow',
-      'fullScreen',
-      'thumbs',
-      'close'
+      "slideShow",
+      "fullScreen",
+      "thumbs",
+      "close"
     ],
   });
 }

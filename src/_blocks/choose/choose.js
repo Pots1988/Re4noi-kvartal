@@ -35,7 +35,6 @@ if($(".choose").length) {
     } else if (number == "#three-room") {
       room = 3;
     }
-    console.log(number);
     $(".choose__flats-type [data-room='" + room + "']").trigger("click");
     history.pushState(null, null, location.origin + location.pathname);
   }
