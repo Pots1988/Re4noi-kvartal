@@ -18,18 +18,13 @@
   if ($(".menu").hasClass("menu--main")) {
     var lastId,
         menuItems = $(".menu__list a"),
-        scrollItems = [];
-
-        menuItems.each(function(){
-          var item = $("" + $(this).attr("href"));
-          console.log(item);
-
-          // if (item.length) {
-            scrollItems.push(item);
-          // }
-        });
-
-      var  emptyElement = $("<div class='menu-empty'>").css({
+        scrollItems = menuItems.map(function(){
+          var item = $($(this).attr("href").slice(1));
+          if (item.length) {
+            return item;
+          }
+        }),
+        emptyElement = $("<div class='menu-empty'>").css({
           "height": $(".menu").outerHeight(true),
           "position": "absolute",
           "z-index": -1,
@@ -42,7 +37,7 @@
       } else {
         headerHeight = -1;
       }
-      var href = $(this).attr("href"),
+      var href = $(this).attr("href").slice(1),
           offsetTop = href === "#" ? 0 : $(href).offset().top - headerHeight;
       $("html, body").stop().animate({
           scrollTop: offsetTop
@@ -68,23 +63,18 @@
 
       var fromTop = $(this).scrollTop();
 
-      var cur = [];
-
-      $(scrollItems).each(function(){
+      var cur = scrollItems.map(function(){
         if ($(this).offset().top < fromTop + headerHeight) {
-          cur.push(this);
+          return this;
         }
       });
 
-      cur = $(cur);
-
       cur = cur[cur.length - 1];
-
       var id = cur && cur.length ? cur[0].id : "";
 
       if (lastId !== id) {
         lastId = id;
-        menuItems.removeClass("active").filter("[href='#" + id + "']").addClass("active");
+        menuItems.removeClass("active").filter("[href='/#" + id + "']").addClass("active");
       }
     });
   }
