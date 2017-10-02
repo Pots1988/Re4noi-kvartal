@@ -18,13 +18,17 @@
   if ($(".menu").hasClass("menu--main")) {
     var lastId,
         menuItems = $(".menu__list a"),
-        scrollItems = menuItems.map(function(){
+        scrollItems = [];
+
+        menuItems.each(function(){
           var item = $($(this).attr("href"));
-          if (item.length) {
-            return item;
-          }
-        }),
-        emptyElement = $("<div class='menu-empty'>").css({
+
+          // if (item.length) {
+            scrollItems.push(item);
+          // }
+        });
+
+      var  emptyElement = $("<div class='menu-empty'>").css({
           "height": $(".menu").outerHeight(true),
           "position": "absolute",
           "z-index": -1,
@@ -63,13 +67,18 @@
 
       var fromTop = $(this).scrollTop();
 
-      var cur = scrollItems.map(function(){
+      var cur = [];
+
+      $(scrollItems).each(function(){
         if ($(this).offset().top < fromTop + headerHeight) {
-          return this;
+          cur.push(this);
         }
       });
 
+      cur = $(cur);
+
       cur = cur[cur.length - 1];
+
       var id = cur && cur.length ? cur[0].id : "";
 
       if (lastId !== id) {
