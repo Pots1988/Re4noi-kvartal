@@ -21,7 +21,8 @@
         scrollItems = [];
 
         menuItems.each(function(){
-          var item = $($(this).attr("href"));
+          var item = $("" + $(this).attr("href"));
+          console.log(item);
 
           // if (item.length) {
             scrollItems.push(item);
