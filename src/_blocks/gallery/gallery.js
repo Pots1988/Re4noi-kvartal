@@ -1,4 +1,5 @@
 if ($(".fotorama").length) {
+
   if (window.innerWidth > 1024) {
     var width = 80,
         height = 72,
@@ -12,6 +13,7 @@ if ($(".fotorama").length) {
     height = 42;
     margin = 5;
   }
+
   $(".fotorama").fotorama({
     width: "100%",
     maxwidth: "100%",
@@ -23,6 +25,25 @@ if ($(".fotorama").length) {
     autoplay: true,
     keyboard: true,
     arrows: false
+  });
+
+  $(".gallery__link").on("click", function(e){
+    e.preventDefault();
+    if (!$(this).hasClass("gallery__link--active")) {
+      $(".gallery__link").removeClass("gallery__link--active");
+      $(this).addClass("gallery__link--active");
+      $(".fotorama").removeAttr("data-visible");
+      $($(this).attr("href")).attr("data-visible", "");
+    }
+  });
+
+  $(".fotorama--video").on("click", ".fotorama__stage .fotorama__video-play", function(){
+    console.log("CLINK");
+    $(".gallery__tabs").attr("data-disabled", "");
+  });
+
+  $(".fotorama__video-close").on("click", function(){
+    $(".gallery__tabs").removeAttr("data-disabled");
   });
 }
 

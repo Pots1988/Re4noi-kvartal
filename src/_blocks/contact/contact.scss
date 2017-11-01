@@ -17,24 +17,60 @@ $contact-form-bg: rgba(36,122,191,0.85);
 
 .contact__form {
   background: $contact-bg;
-  padding: 47px 40px 53px;
+  padding: 27px 40px 40px;
 }
 
 .contact__form-inner {
-  padding: 37px 20px 40px;
+  padding: 30px 70px;
   background: $contact-form-bg;
   box-shadow: 3px 3px 35px 11px rgba(0,0,0,0.57);
   color: $white;
-}
-
-.contact__form-title {
   font-size: 24px;
   line-height: 1;
-  font-weight: 500;
+}
+
+.contact__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  position: relative;
+  margin: 0 0 20px;
+  &::after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    left: -5px;
+    bottom: 0;
+    right: -5px;
+    background: $white;
+  }
+}
+
+.contact__form-text {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25px;
+  }
+  span {
+    margin-right: 4px;
+  }
+}
+
+.contact__order-call {
   text-transform: uppercase;
-  margin: 0 0 0.79em;
-  color: #fff1f1;
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
+.contact__order-text {
+  margin: 0;
 }
 
 .contact__map {
@@ -44,6 +80,12 @@ $contact-form-bg: rgba(36,122,191,0.85);
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+@media(max-width: 1110px) {
+  .contact__form-inner {
+    padding: 30px;
+  }
 }
 
 @media #{$t} {
@@ -64,16 +106,49 @@ $contact-form-bg: rgba(36,122,191,0.85);
 
   .contact__form-inner {
     padding: 25px 20px;
+    font-size: 20px;
   }
 
-  .contact__form-title {
-    margin-bottom: 1em;
+  .contact__form-text {
+    svg {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
   }
 }
 
 @media #{$s} {
-  .contact__form-title {
-    font-size: 20px;
-    line-height: 1.2;
+  .contact__mask {
+    border-left-width: 10px;
+    border-right-width: 10px;
+  }
+
+  .contact__form {
+    padding: 20px 10px;
+  }
+
+  .contact__form-inner {
+    font-size: 18px;
+  }
+
+  .contact__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .contact__form-text {
+    margin-bottom: 10px;
+  }
+
+  .contact__order-call {
+    flex-direction: column;
+  }
+
+  .contact__order-text {
+    margin-bottom: 20px;
   }
 }

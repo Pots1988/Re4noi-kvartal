@@ -10,7 +10,7 @@
 
 .choose__header {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   margin-bottom: 1.5em;
   &--flat {
     margin-bottom: 0;
@@ -60,7 +60,7 @@
     text-transform: uppercase;
     line-height: 1.67;
     margin-left: 4.28em;
-    padding: 0.78em 0;
+    padding: 0 0 0.78em;
     position: relative;
     &:first-child {
       margin-left: 0;
@@ -75,6 +75,27 @@
         background: #94beff;
         height: 4px;
       }
+    }
+  }
+}
+
+.coose__floor {
+  margin: 0;
+  font-size: 18px;
+  line-height: 2;
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      color: #94beff;
     }
   }
 }
