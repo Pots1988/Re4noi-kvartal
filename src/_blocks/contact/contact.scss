@@ -142,6 +142,8 @@ $contact-form-bg: rgba(36,122,191,0.85);
 
   .contact__form-text {
     margin-bottom: 10px;
+    display: block;
+    text-align: center;
   }
 
   .contact__order-call {
@@ -150,5 +152,6 @@ $contact-form-bg: rgba(36,122,191,0.85);
 
   .contact__order-text {
     margin-bottom: 20px;
+    text-align: center;
   }
 }
